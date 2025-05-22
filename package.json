@@ -1,0 +1,22 @@
+{
+  "name": "chocoearly",
+  "version": "1.0.0",
+  "description": "\"一个针对Chocolatey的图形化应用\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OracleLoadstar/Chocoearly.git"
+  },
+  "keywords": [
+    "gui"
+  ],
+  "author": "OracleLoadstar",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/OracleLoadstar/Chocoearly/issues"
+  },
+  "homepage": "https://github.com/OracleLoadstar/Chocoearly#readme"
+}

@@ -1,0 +1,22 @@
+body{
+    background-color: #E6E6FA;
+    margin: 0;
+}
+
+
+#footer{
+    display: flex;
+    position: fixed;
+    background-color: lightcoral;
+    bottom: 0;
+    width: 100vw;
+    height: 72px;
+    overflow: hidden;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+#footer ul{
+    display: flex;
+}

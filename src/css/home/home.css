@@ -1,0 +1,18 @@
+#home{
+    padding: 12px;
+}
+#home-title-bar{
+    font-size: 2rem;
+    font-weight: 500;
+}
+#home-content{
+    margin-top: 3vh;
+    display: flex;
+    width: calc(35vw - 12px);
+    flex-flow: row wrap;
+    justify-content: center;
+    font-weight: 300;
+    color: #4169e1;
+}
+
+
