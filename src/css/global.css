@@ -15,8 +15,16 @@ body{
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
-
+    padding-left: 24px;
+    gap: 16px;
 }
-#footer ul{
+#footer div{
+    height: 72px;
     display: flex;
+    justify-items: center;
+    align-items: center;
+}
+#footer img{
+    width: 32px;
+    height: 32px;
 }

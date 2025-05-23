@@ -1,18 +1,21 @@
 #home{
-    padding: 12px;
+    padding: 10vh 8vw;
 }
 #home-title-bar{
     font-size: 2rem;
     font-weight: 500;
 }
 #home-content{
-    margin-top: 3vh;
+    margin-top: 10vh;
     display: flex;
-    width: calc(35vw - 12px);
+    width: calc(30vw - 12px);
     flex-flow: row wrap;
     justify-content: center;
-    font-weight: 300;
+    font-weight: 100;
     color: #4169e1;
+    font-size: 1.1rem;
 }
-
-
+#home-content p{
+    display: block;
+    margin-bottom: 1rem;
+}
