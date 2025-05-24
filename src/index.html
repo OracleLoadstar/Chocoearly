@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chocoearly</title>
 </head>
 <body class="light">
@@ -12,12 +10,12 @@
 
     <!-- 主界面 -->
     <div id="home">
-        <div id="home-title-bar">欢迎使用,</div>
+        <div id="home-title-bar">欢迎,</div>
         <div id="home-content">
             <div id="home-quick-start">
                 <u>
                     <p id="home-quick-start-upgrade">更新应用( 0 )</p>
-                    <p id="home-quick-start-version">了解 此 版本</p>
+                    <p id="home-quick-start-version">了解 此 版本!</p>
                 </u>
             </div>
             <div id="home-versio-info">
@@ -27,16 +25,35 @@
         </div>
     </div>
 
+    <!-- cloud -->
+    <div id="cloud"></div>
+
+    <!-- local -->
+    <div id="local"></div>
+
+    <!-- setting -->
+    <div id="setting"></div>
 
     <!-- 底部导航栏 -->
     <div id="footer">
-            <div id="footer-home"><img src="assets/home.svg" alt=""></div>
-            <div id="footer-local"><img src="assets/dashboard.svg" alt=""></div>
-            <div id="footer-cloud"><img src="assets/cloud.svg" alt=""></div>
-            <div id="footer-setting"><img src="assets/setting.svg" alt=""></div>
-        <div id="state"></div>
+        <div id="footer-home"><img src="assets/home.svg" alt=""></div>
+        <div id="footer-setting"><img src="assets/setting.svg" alt=""></div>
+        <div id="footer-status"><img src="assets/infinite.svg" alt=""></div>
+        <div id="footer-local"><img src="assets/dashboard.svg" alt=""></div>
+        <div id="footer-cloud"><img src="assets/cloud.svg" alt=""></div>
+        <div id="footer-select"></div>
+        
     </div>
+    <div id="footer-high"></div>
 </body>
 </html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="css/global.css">
 <link rel="stylesheet" href="css/home/home.css">
+
+<script src="./js/lang/zh_cn.js"></script>
+<script src="./js/footer/animation.js"></script>
+<script src="./js/footer/switch.js"></script>
+

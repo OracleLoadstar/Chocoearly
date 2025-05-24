@@ -6,25 +6,35 @@ body{
 
 #footer{
     display: flex;
-    position: fixed;
-    background-color: lightcoral;
-    bottom: 0;
-    width: 100vw;
-    height: 72px;
-    overflow: hidden;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 24px;
-    gap: 16px;
+    position: absolute;
+    bottom: 20px;
+    left:calc(50% - 126px);
+    background-color: #b8b8fc;
+    padding:10px;
+    border-radius:50px;
 }
+/* #footer:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s;
+} */
 #footer div{
-    height: 72px;
+    height:40px;
     display: flex;
     justify-items: center;
     align-items: center;
+    margin-left:12px;
 }
 #footer img{
     width: 32px;
     height: 32px;
+}
+#footer-high{
+    height:60px;
+    width:60px;
+    background-color: #b8b8fc;
+    border-radius:50%;
+    position: absolute;
+    left:calc(50% - 30px);
+    bottom:35px;
+    z-index:-1;
 }

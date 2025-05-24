@@ -4,7 +4,7 @@
   "description": "\"一个针对Chocolatey的图形化应用\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/OracleLoadstar/Chocoearly/issues"
   },
-  "homepage": "https://github.com/OracleLoadstar/Chocoearly#readme"
+  "homepage": "https://github.com/OracleLoadstar/Chocoearly#readme",
+  "dependencies": {
+    "pnpm": "^10.11.0"
+  },
+  "devDependencies": {
+    "electron": "^36.3.1"
+  }
 }

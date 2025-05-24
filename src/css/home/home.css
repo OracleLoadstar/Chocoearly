@@ -5,6 +5,10 @@
     font-size: 2rem;
     font-weight: 500;
 }
+#home-quick-start p:hover{
+    transition:0.2s;
+    color:#2047bb;
+}
 #home-content{
     margin-top: 10vh;
     display: flex;
