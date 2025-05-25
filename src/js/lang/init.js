@@ -1,12 +1,11 @@
-let dnytitle;
-let canupgradeapp = 0;
-let lang = zh_cn;
-
-const lang_ = navigator.language
 
 if (lang_ == "zh-CN" || lang_ == "zh-TW") {
-    lang = zh_cn;
+    lang = window.zh_cn;
+    // reflash_langguage();
 }
 else if (lang_ == "en-US" || lang_ == "en-GB") {
-    lang = en_us;
+    lang = window.en_us;
+} else {
+    lang = window.zh_cn;
 }
+reflash_langguage();

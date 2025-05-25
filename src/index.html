@@ -26,7 +26,9 @@
     </div>
 
     <!-- cloud -->
-    <div id="cloud"></div>
+    <div id="cloud">
+        <ul id="item-list"></ul>
+    </div>
 
     <!-- local -->
     <div id="local"></div>
@@ -34,17 +36,32 @@
     <!-- setting -->
     <div id="setting"></div>
 
+    <!-- 状态卡片 -->
+     <div id="statuscard">
+        <ion-icon name="caret-down-circle" id="statuscard-hide"></ion-icon>
+     </div>
+
     <!-- 底部导航栏 -->
     <div id="footer">
-        <div id="footer-home"><img src="assets/home.svg" alt=""></div>
-        <div id="footer-setting"><img src="assets/setting.svg" alt=""></div>
-        <div id="footer-status"><img src="assets/infinite.svg" alt=""></div>
-        <div id="footer-local"><img src="assets/dashboard.svg" alt=""></div>
-        <div id="footer-cloud"><img src="assets/cloud.svg" alt=""></div>
+        <div id="footer-home">
+            <ion-icon name="home"></ion-icon>
+            <!-- <span class="tooltip" id="tooltip-home">首页</span> -->
+        </div>
+        <div id="footer-setting">
+            <ion-icon name="settings"></ion-icon>
+        </div>
+        <div id="footer-status">
+            <ion-icon name="infinite"></ion-icon>
+        </div>
+        <div id="footer-local">
+            <ion-icon name="apps"></ion-icon>
+        </div>
+        <div id="footer-cloud">
+            <ion-icon name="cloud"></ion-icon>
+        </div>
         <div id="footer-select"></div>
         
     </div>
-    <div id="footer-high"></div>
 </body>
 </html>
 <meta charset="UTF-8">
@@ -53,7 +70,25 @@
 <link rel="stylesheet" href="css/global.css">
 <link rel="stylesheet" href="css/home/home.css">
 
+<!-- 变量集 -->
+<script src="./js/global.js"></script>
+
+<!-- 语言文件 -->
+<script src="./js/lang/en_us.js"></script>
 <script src="./js/lang/zh_cn.js"></script>
+
+<!-- 语言加载 -->
+<script src="./js/lang/reflash_lang.js"></script>
+<script src="./js/lang/init.js"></script>
+
+<!-- footer动画 -->
 <script src="./js/footer/animation.js"></script>
 <script src="./js/footer/switch.js"></script>
+<script src="./js/footer/statuscard.js"></script>
 
+<!-- 图标库 使用方法：<ion-icon name="home"></ion-icon> 具体查看官网：https://ionic.io/ionicons -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<!-- 逻辑 -->
+<script type="module" src="./js/footer/getitem.js"></script>

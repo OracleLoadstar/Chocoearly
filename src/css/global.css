@@ -12,29 +12,50 @@ body{
     background-color: #b8b8fc;
     padding:10px;
     border-radius:50px;
+    transition: all 0.5s ease-in-out;
 }
-/* #footer:hover{
-    transform: scale(1.05);
-    transition: transform 0.3s;
-} */
 #footer div{
-    height:40px;
+    height:36px;
     display: flex;
     justify-items: center;
     align-items: center;
     margin-left:12px;
 }
-#footer img{
-    width: 32px;
-    height: 32px;
+#footer ion-icon{
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
 }
-#footer-high{
-    height:60px;
-    width:60px;
-    background-color: #b8b8fc;
-    border-radius:50%;
-    position: absolute;
-    left:calc(50% - 30px);
-    bottom:35px;
-    z-index:-1;
+
+
+
+#statuscard{
+    background-color: #a4a4fa;
+    box-shadow: 
+    0 5px 10px #60609280,
+    0 0 10px -5px #60609280;
+    border-radius: 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    position: fixed;
+    height:clamp(300px , 30vh , 1000px);
+    width:clamp(600px , 60vh , 2000px);
+    left: 50%;
+    transform: translateX(-50%);
+    
+    bottom:-1000px;
+    transition: all 0.5s ease-in-out;
+}
+#statuscard ion-icon {
+    font-size: 24px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3px;
+    transform: scale(1);
+    transition: all 0.2s ease;
+}
+#statuscard ion-icon:hover{
+    transform: scale(1.05);
+    transition: all 0.2s ease;
 }
