@@ -10,6 +10,23 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #E6E6FA; /* 浅紫色背景 */
+    z-index: -1; /* 确保在内容下层 */
+}
+.shape {
+    position: absolute;
+    opacity: 0.3; /* 半透明效果 */
+}
+
+
+
 #footer{
     display: flex;
     position: absolute;
