@@ -6,8 +6,8 @@
 <body class="light">
     <!-- 背景图形 -->
     <div class="bg"></div>
-
-
+    
+    
     <!-- 主界面 -->
     <div id="home">
         <div id="home-title-bar">欢迎,</div>
@@ -24,23 +24,23 @@
             </div>
         </div>
     </div>
-
+    
     <!-- cloud -->
     <div id="cloud">
         <ul id="item-list"></ul>
     </div>
-
+    
     <!-- local -->
     <div id="local"></div>
-
+    
     <!-- setting -->
     <div id="setting"></div>
-
+    
     <!-- 状态卡片 -->
-     <div id="statuscard">
+    <div id="statuscard">
         <ion-icon name="caret-down-circle" id="statuscard-hide"></ion-icon>
-     </div>
-
+    </div>
+    
     <!-- 底部导航栏 -->
     <div id="footer">
         <div id="footer-home">
@@ -60,8 +60,8 @@
             <ion-icon name="cloud"></ion-icon>
         </div>
         <div id="footer-select"></div>
-        
     </div>
+
 </body>
 </html>
 <meta charset="UTF-8">
@@ -69,6 +69,7 @@
 
 <link rel="stylesheet" href="css/global.css">
 <link rel="stylesheet" href="css/home/home.css">
+
 
 <!-- 变量集 -->
 <script src="./js/global.js"></script>
@@ -89,6 +90,26 @@
 <!-- 图标库 使用方法：<ion-icon name="home"></ion-icon> 具体查看官网：https://ionic.io/ionicons -->
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<!-- 动画库 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<!-- 入场动画 注意,必须放在这里 -->
+<script>
+    gsap.from(["#home-title-bar", "#home-quick-start-upgrade", "#home-quick-start-version"], { 
+        opacity: 0, 
+        y: 50, 
+        duration: 1, 
+        stagger: 0.3,
+        ease: "power2.out" 
+    });
+    gsap.from(["#footer-home", "#footer-setting", "#footer-local", "#footer-cloud", "#footer-status"], {
+        opacity: 0, 
+        y: 35, 
+        duration: 0.5, 
+        stagger: 0.2,
+        ease: "power2.out"
+    });
+</script>
 
 <!-- 逻辑 -->
 <script type="module" src="./js/footer/getitem.js"></script>

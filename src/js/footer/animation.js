@@ -3,22 +3,18 @@ let home_botton = document.getElementById("footer-home");
 let local_button = document.getElementById("footer-local");
 let cloud_button = document.getElementById("footer-cloud");
 let setting_button = document.getElementById("footer-setting");
-let high = document.getElementById("footer-high");
 let status_button = document.getElementById("footer-status");
 
 footer_hover_animation.addEventListener('mouseover', ()=>{
     footer_hover_animation.style.transform = "scale(1.05)";
-    footer_hover_animation.style.transition = "transform 0.3s";
-    high.style.transform = "scale(1.05)";
-    high.style.transition = "transform 0.3s";
+    footer_hover_animation.style.transition = "transform 0.3s ease , box-shadow 0.3s ease";
+    footer_hover_animation.style.boxShadow="0 5px 10px #60609280,0 0 10px -5px #60609280";
 });
 
 footer_hover_animation.addEventListener('mouseleave', ()=>{
     footer_hover_animation.style.transform = "scale(1)";
-    footer_hover_animation.style.transition = "transform 0.3s";
-    high.style.transform = "scale(1)";
-    high.style.transition = "transform 0.3s";
-
+    footer_hover_animation.style.transition = "transform 0.3s ease , box-shadow 0.3s ease";
+    footer_hover_animation.style.boxShadow="0 0 0 #60609280,0 0 10px -5px #60609280";
 });
 
 home_botton.addEventListener('mouseover', ()=>{
@@ -60,9 +56,9 @@ setting_button.addEventListener('mouseleave', ()=>{
 
 status_button.addEventListener('mouseover', ()=>{
     status_button.style.transform = "scale(1.2)";
-    status_button.style.transition = "transform 0.3s";
+    status_button.style.transition = "all 0.3s";
 });
 status_button.addEventListener('mouseleave', ()=>{
     status_button.style.transform = "scale(1)";
-    status_button.style.transition = "transform 0.3s";
+    status_button.style.transition = "all 0.3s";
 });

@@ -1,13 +1,18 @@
 #home{
     padding: 10vh 8vw;
+    overflow: hidden;
 }
 #home-title-bar{
     font-size: 2rem;
     font-weight: 500;
 }
+#home-quick-start p{
+    transition: color 0.2s ease;
+}
 #home-quick-start p:hover{
     transition:0.2s;
     color:#2047bb;
+    cursor: pointer;
 }
 #home-content{
     margin-top: 10vh;

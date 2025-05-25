@@ -1,18 +1,23 @@
 body{
     background-color: #E6E6FA;
     margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-
+body::-webkit-scrollbar {
+    display: none;
+}
 
 #footer{
     display: flex;
     position: absolute;
     bottom: 20px;
-    transform: translateX(50%);
+    left: calc(50% - 121px);
     background-color: #b8b8fc;
     padding:10px;
     border-radius:50px;
-    transition: all 0.5s ease-in-out;
 }
 #footer div{
     height:36px;
@@ -21,12 +26,32 @@ body{
     align-items: center;
     margin-left:12px;
 }
+#footer div:hover{
+    cursor: pointer;
+}
 #footer ion-icon{
     width: 24px;
     height: 24px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s cubic-bezier(0.33, 0, 0.67, 1);
 }
-
+#footer ion-icon:hover{
+    filter: drop-shadow(0 0 8px rgba(0,0,0,0.2));
+}
+#footer-status{
+    color: #6B8E6D;
+}
+#footer-home{
+    color: #FFB74D;
+}
+#footer-setting{
+    color: #616161;
+}
+#footer-local{
+    color: #81C784;
+}
+#footer-cloud{
+    color: #81D4FA;
+}
 
 
 #statuscard{
@@ -44,7 +69,7 @@ body{
     transform: translateX(-50%);
     
     bottom:-1000px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease;
 }
 #statuscard ion-icon {
     font-size: 24px;
