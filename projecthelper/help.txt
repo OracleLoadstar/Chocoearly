@@ -1,0 +1,6 @@
+build         构建本项目
+proxy         设置代理
+push          上传项目
+setupenv      配置开发环境
+test          测试
+help          帮助
