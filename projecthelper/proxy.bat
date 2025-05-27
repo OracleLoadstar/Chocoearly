@@ -7,7 +7,7 @@ if exist "%work%\laster.bat" (
 )
 goto c
 :a
-set /p "ans=æ˜¯å¦ä½¿ç”¨ä¸Šæ¬¡é…ç½®ï¼Ÿ(y/n)"
+set /p "ans=ÊÇ·ñÊ¹ÓÃÉÏ´ÎÅäÖÃ£¿(y/n)"
 if "%ans%" == "y" (
     goto b
 ) else (
@@ -20,14 +20,14 @@ if exist "%work%\laster.bat" (
 goto eof
 
 :c
-set /p "ip=è¯·è¾“å…¥ä»£ç†åœ°å€: "
-set /p "port=è¯·è¾“å…¥ä»£ç†ç«¯å£: "
-set /p "user=è¯·è¾“å…¥ä»£ç†ç”¨æˆ·å: "
-set /p "pass=è¯·è¾“å…¥ä»£ç†å¯†ç : "
+set /p "ip=ÇëÊäÈë´úÀíµØÖ·: "
+set /p "port=ÇëÊäÈë´úÀí¶Ë¿Ú: "
+set /p "user=ÇëÊäÈë´úÀíÓÃ»§Ãû: "
+set /p "pass=ÇëÊäÈë´úÀíÃÜÂë: "
 set http_proxy=http://%user%:%pass%@%ip%:%port%
 set https_proxy=https://%user%:%pass%@%ip%:%port%
 
-::å†™å…¥æ–‡ä»¶
+::Ğ´ÈëÎÄ¼ş
 (
     echo set http_proxy=http://%user%:%pass%@%ip%:%port%
     echo set https_proxy=https://%user%:%pass%@%ip%:%port%

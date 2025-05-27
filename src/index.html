@@ -41,6 +41,11 @@
         <ion-icon name="caret-down-circle" id="statuscard-hide"></ion-icon>
     </div>
     
+    <!-- 更新日志 -->
+     <div id="updata">
+        <ion-icon name="caret-forward-circle" id="updata-hide"></ion-icon>
+     </div>
+
     <!-- 底部导航栏 -->
     <div id="footer">
         <div id="footer-home">
@@ -62,6 +67,15 @@
         <div id="footer-select"></div>
     </div>
 
+    <!-- 底部导航栏footertip -->
+     <div id="footertip">
+        <div id="tip-home">首页</div>
+        <div id="tip-setting">设置</div>
+        <div id="tip-status">状态栏</div>
+        <div id="tip-local">本地</div>
+        <div id="tip-cloud">云端</div>
+     </div>
+
 </body>
 </html>
 <meta charset="UTF-8">
@@ -70,6 +84,8 @@
 <link rel="stylesheet" href="css/global.css">
 <link rel="stylesheet" href="css/home/home.css">
 
+<!-- 背景动画 -->
+<script src="js/bg.js"></script>
 
 <!-- 变量集 -->
 <script src="./js/global.js"></script>
@@ -82,24 +98,27 @@
 <script src="./js/lang/reflash_lang.js"></script>
 <script src="./js/lang/init.js"></script>
 
+<!-- 图标库 使用方法：<ion-icon name="home"></ion-icon> 具体查看官网：https://ionic.io/ionicons -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<!-- home动画 -->
+ <script src="js/home/animation.js"></script>
+
 <!-- footer动画 -->
 <script src="./js/footer/animation.js"></script>
 <script src="./js/footer/switch.js"></script>
 <script src="./js/footer/statuscard.js"></script>
-
-<!-- 图标库 使用方法：<ion-icon name="home"></ion-icon> 具体查看官网：https://ionic.io/ionicons -->
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 <!-- 动画库 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 <!-- 入场动画 注意,必须放在这里 -->
 <script>
     gsap.from(["#home-title-bar", "#home-quick-start-upgrade", "#home-quick-start-version"], { 
-        opacity: 0, 
-        y: 50, 
-        duration: 1, 
-        stagger: 0.3,
+        opacity: 0, /*初始透明度*/
+        y: 50, /*初始y轴*/
+        duration: 1, /*动画持续时间*/
+        stagger: 0.3,/*连续动画的间隔时间*/
         ease: "power2.out" 
     });
     gsap.from(["#footer-home", "#footer-setting", "#footer-local", "#footer-cloud", "#footer-status"], {

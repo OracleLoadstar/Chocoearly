@@ -1,6 +1,6 @@
-build         æ„å»ºæœ¬é¡¹ç›®
-proxy         è®¾ç½®ä»£ç†
-push          ä¸Šä¼ é¡¹ç›®
-setupenv      é…ç½®å¼€å‘ç¯å¢ƒ
-test          æµ‹è¯•
-help          å¸®åŠ©
+build         ¹¹½¨±¾ÏîÄ¿
+proxy         ÉèÖÃ´úÀí
+push          ÉÏ´«ÏîÄ¿
+setupenv      ÅäÖÃ¿ª·¢»·¾³
+test          ²âÊÔ
+help          °ïÖú

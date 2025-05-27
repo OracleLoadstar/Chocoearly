@@ -1,3 +1,6 @@
+/* html{
+    font-family: ;
+} */
 body{
     background-color: #E6E6FA;
     margin: 0;
@@ -31,10 +34,11 @@ body::-webkit-scrollbar {
     display: flex;
     position: absolute;
     bottom: 20px;
-    left: calc(50% - 121px);
+    left: calc(50% - 96px);
     background-color: #b8b8fc;
     padding:10px;
     border-radius:50px;
+    transition: all 0.3 ease-in-out;
 }
 #footer div{
     height:36px;
@@ -53,21 +57,26 @@ body::-webkit-scrollbar {
 }
 #footer ion-icon:hover{
     filter: drop-shadow(0 0 8px rgba(0,0,0,0.2));
+    transform: translateY(-5px);
 }
 #footer-status{
     color: #6B8E6D;
 }
 #footer-home{
-    color: #FFB74D;
+    /* color: #FFB74D; */    
+    color: #000;
 }
 #footer-setting{
-    color: #616161;
+    color: #000;
+    /* color: #616161; */
 }
 #footer-local{
-    color: #81C784;
+    color: #000;
+    /* color: #81C784; */
 }
 #footer-cloud{
-    color: #81D4FA;
+    color: #000;
+    /* color: #81D4FA; */
 }
 
 
@@ -84,6 +93,7 @@ body::-webkit-scrollbar {
     width:clamp(600px , 60vh , 2000px);
     left: 50%;
     transform: translateX(-50%);
+    z-index: 100000;
     
     bottom:-1000px;
     transition: all 0.5s ease;
@@ -100,4 +110,33 @@ body::-webkit-scrollbar {
 #statuscard ion-icon:hover{
     transform: scale(1.05);
     transition: all 0.2s ease;
+}
+
+
+#footertip{
+    display: flex;
+    flex-wrap: row nowrap;
+    position: absolute;
+    bottom: 0px;
+    left: calc(50% - 96px);
+    background-color: transparent;
+    padding:10px;
+    border-radius:50px;
+    transition: all 0.3 ease-in-out;
+    font-size: 10px;
+    font-weight: 600;
+    margin-left: 14px;
+    color: #61616100;
+}
+#tip-setting{
+    margin-left: 16px;
+}
+#tip-status{
+    margin-left: 11px;
+}
+#tip-local{
+    margin-left: 11px;
+}
+#tip-cloud{
+    margin-left: 16px;
 }

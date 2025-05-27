@@ -28,3 +28,32 @@
     display: block;
     margin-bottom: 1rem;
 }
+
+#updata{
+    display: grid;
+    position: fixed;
+    background-color: #E0E6FA;
+    width: 60vw;
+    height: 90vh;
+    /* right: 0; */
+    right:calc(-60vw - 2px);
+    bottom: 50%;
+    transform: translateY(50%);
+    z-index: 1000000;
+    border: 1px solid #000;
+    border-radius: 35px 0 0 35px;
+    opacity: 0;
+    transition: right 0.3s ease;
+}
+#updata ion-icon{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    bottom: calc(50% - 12px);
+    right:calc(60vw + 2px);
+    transition: all 0.3s cubic-bezier(0.33, 0, 0.67, 1);
+}
+#updata ion-icon:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 8px rgba(0,0,0,0.2));
+}
