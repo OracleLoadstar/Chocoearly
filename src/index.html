@@ -7,7 +7,10 @@
     <!-- 背景图形 -->
     <div class="bg"></div>
     
-    
+    <!-- 重要通知 -->
+     <div id="notice-imp"></div>
+
+
     <!-- 主界面 -->
     <div id="home">
         <div id="home-title-bar">欢迎,</div>
@@ -18,9 +21,9 @@
                     <p id="home-quick-start-version">了解 此 版本!</p>
                 </u>
             </div>
-            <div id="home-versio-info">
-                <h1 id="versio-info-title"></h1>
-                <p id="versio-info-p"></p>
+            <div id="home-version-info">
+                <h1 id="version-info-title"></h1>
+                <p id="version-info-p"></p>
             </div>
         </div>
     </div>
@@ -38,12 +41,27 @@
     
     <!-- 状态卡片 -->
     <div id="statuscard">
+        <div id="statuscard-status">
+            <div id="status-bar">
+                <ion-icon name="checkmark" id="ready" class="app-status"></ion-icon>
+                <!--错误发生 <ion-icon name="close" id="error"></ion-icon> -->
+                <!--重要更新 <ion-icon name="alert" id="imp-update"></ion-icon> -->
+                <!--不再支持的版本 <ion-icon name="sad" id="not-support"></ion-icon> -->
+                <ion-icon name="download" id="app-update" class="app-status"></ion-icon>
+                <ion-icon name="cloud-download" id="download" class="app-status"></ion-icon>
+                <ion-icon name="wifi-outline"></ion-icon>
+            </div>
+            <div id="status-download"></div>
+        </div>
+        <div id="statuscard-notice">
+            <div id="notice-unimp"></div>
+        </div>
         <ion-icon name="caret-down-circle" id="statuscard-hide"></ion-icon>
     </div>
     
     <!-- 更新日志 -->
-     <div id="updata">
-        <ion-icon name="caret-forward-circle" id="updata-hide"></ion-icon>
+     <div id="update">
+        <ion-icon name="caret-forward-circle" id="update-hide"></ion-icon>
      </div>
 
     <!-- 底部导航栏 -->

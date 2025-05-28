@@ -1,11 +1,11 @@
 
 // 12:00 16:00 
 if (hours >= 12 && hours < 16) {
-    dnytitle = "中午好！";
+    dnytitle = "下午好,";
 } else if (hours >= 16 && hours < 24) {
-    dnytitle = "晚上好！";
+    dnytitle = "晚上好,";
 } else {
-    dnytitle = "早上好！";
+    dnytitle = "早上好,";
 };
 
 

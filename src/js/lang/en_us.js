@@ -1,11 +1,11 @@
 
 // 12:00 16:00 
 if (hours >= 12 && hours < 16) {
-    dnytitle = "Good afternoon!";
+    dnytitle = "Good afternoon,";
 } else if (hours >= 16 && hours < 24) {
-    dnytitle = "Good evening!";
+    dnytitle = "Good evening,";
 } else {
-    dnytitle = "Good morning!";
+    dnytitle = "Good morning,";
 };
 
 
