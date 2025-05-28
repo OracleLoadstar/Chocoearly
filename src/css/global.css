@@ -38,7 +38,7 @@ body::-webkit-scrollbar {
     background-color: #b8b8fc;
     padding:10px;
     border-radius:50px;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 #footer div{
     height:36px;
@@ -162,14 +162,14 @@ body::-webkit-scrollbar {
 
 #footertip{
     display: flex;
-    flex-wrap: row nowrap;
+    flex-flow: row nowrap;
     position: absolute;
     bottom: 0px;
     left: calc(50% - 96px);
     background-color: transparent;
     padding:10px;
     border-radius:50px;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
     font-size: 10px;
     font-weight: 600;
     margin-left: 14px;
