@@ -21,9 +21,10 @@
   },
   "homepage": "https://github.com/OracleLoadstar/Chocoearly#readme",
   "dependencies": {
+    "@types/node": "^22.15.29",
     "pnpm": "^10.11.0"
   },
-  "build":{
+  "build": {
     "appId": "com.oracleloadstar.chocoearly",
     "productName": "Chocoearly",
     "directories": {
@@ -31,27 +32,27 @@
     },
     "files": [
       "**/*",
-      "!node_modules/@types{,**/*}", 
+      "!node_modules/@types{,**/*}",
       "!node_modules/electron{,**/*}"
     ],
-    "win": { 
+    "win": {
       "target": [
-        "nsis" 
+        "nsis"
       ],
-      "icon": "build/icon.ico" 
+      "icon": "build/icon.ico"
     },
-    "mac": { 
+    "mac": {
       "target": [
-        "dmg" 
+        "dmg"
       ],
-      "icon": "build/icon.icns" 
+      "icon": "build/icon.icns"
     },
-    "linux": { 
+    "linux": {
       "target": [
         "AppImage",
         "deb"
       ],
-      "icon": "build/icons" 
+      "icon": "build/icons"
     }
   },
   "devDependencies": {

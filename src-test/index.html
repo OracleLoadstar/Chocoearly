@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electron App - Chocolatey Search</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for better aesthetics */
+        body {
+            font-family: 'Inter', sans-serif; /* Using Inter font */
+            background-color: #f0f4f8; /* Light background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Full viewport height */
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 32px;
+            border-radius: 16px; /* Rounded corners */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            max-width: 90%; /* Responsive width */
+            width: 800px; /* Max width */
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        button {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        .btn-primary {
+            background-color: #4f46e5; /* Indigo */
+            color: white;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #4338ca; /* Darker indigo */
+        }
+        pre {
+            background-color: #e2e8f0; /* Light gray for code/output */
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto; /* Allow horizontal scrolling for long lines */
+            white-space: pre-wrap; /* Preserve whitespace and wrap lines */
+            word-break: break-all; /* Break words to prevent overflow */
+            font-family: 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #334155; /* Darker text for readability */
+            min-height: 150px; /* Minimum height for response area */
+        }
+        .error {
+            color: #ef4444; /* Red for errors */
+            font-weight: 600;
+        }
+        h1 {
+            color: #1e293b; /* Dark text for heading */
+            text-align: center;
+            font-size: 2.25rem; /* Large text */
+            font-weight: 700; /* Bold */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chocolatey Package Search</h1>
+        <button id="getPackagesBtn" class="btn-primary">获取 Chocolatey 包列表</button>
+        <pre id="responseOutput" class="text-gray-700"></pre>
+    </div>
+
+    <script>
+        // 导入 Electron 的 ipcRenderer 模块
+        // 由于 nodeIntegration: true 和 contextIsolation: false，可以直接在渲染器进程中使用 require
+        const { ipcRenderer } = require('electron');
+
+        // 获取 DOM 元素
+        const getPackagesBtn = document.getElementById('getPackagesBtn');
+        const responseOutput = document.getElementById('responseOutput');
+
+        // 定义要执行的 PowerShell 命令
+        // 这个命令会搜索 Chocolatey 包，格式化为 JSON
+        // 注意：这个命令需要在 Windows 系统且安装了 Chocolatey 的环境下才能成功执行
+        const chocoCommand = 'powershell -Command "& { (choco search --limit-output) | ForEach-Object { $_.ToString().Trim() } | Where-Object { $_ -match \'^(?<Name>[^|]+)\\|(?<Version>[^|]+)$\' } | ForEach-Object { $matchResult = $Matches; [PSCustomObject]@{ Name = $matchResult.Name.Trim(); Version = $matchResult.Version.Trim() } } | ConvertTo-Json -Depth 100 -Compress }"';
+
+        // 为按钮添加点击事件监听器
+        getPackagesBtn.addEventListener('click', () => {
+            responseOutput.textContent = '正在获取 Chocolatey 包列表，请稍候...';
+            // 向主进程发送 'get_item' 消息，并附带要执行的命令
+            ipcRenderer.send('get_item', chocoCommand);
+        });
+
+        // 监听来自主进程的 'get_item_response' 消息
+        ipcRenderer.on('get_item_response', (event, response) => {
+            if (response.success) {
+                // 如果成功，显示 JSON 格式的数据
+                responseOutput.textContent = '成功获取数据：\n' + JSON.stringify(response.data, null, 2);
+                responseOutput.classList.remove('error'); // 移除错误样式
+            } else {
+                // 如果失败，显示错误信息
+                responseOutput.textContent = '获取数据失败：\n' + response.error;
+                responseOutput.classList.add('error'); // 添加错误样式
+                console.error('Renderer received error:', response.error);
+            }
+        });
+    </script>
+</body>
+</html>

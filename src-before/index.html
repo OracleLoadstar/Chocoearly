@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>Chocoearly</title>
+</head>
+<body class="light">
+    <!-- 背景图形 -->
+    <div class="bg"></div>
+    
+    <!-- 重要通知 -->
+     <div id="notice-imp"></div>
+
+
+    <!-- 主界面 -->
+    <div id="home">
+        <div id="home-title-bar">欢迎,</div>
+        <div id="home-content">
+            <div id="home-quick-start">
+                <u>
+                    <p id="home-quick-start-upgrade">更新应用( 0 )</p>
+                    <p id="home-quick-start-version">了解 此 版本!</p>
+                </u>
+            </div>
+            <div id="home-version-info">
+                <h1 id="version-info-title"></h1>
+                <p id="version-info-p"></p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- cloud -->
+    <div id="cloud">
+        <ul id="item-list"></ul>
+    </div>
+    
+    <!-- local -->
+    <div id="local"></div>
+    
+    <!-- setting -->
+    <div id="setting"></div>
+    
+    <!-- 状态卡片 -->
+    <div id="statuscard">
+        <div id="statuscard-status">
+            <div id="status-bar">
+                <ion-icon name="checkmark" id="ready" class="app-status"></ion-icon>
+                <!--错误发生 <ion-icon name="close" id="error"></ion-icon> -->
+                <!--重要更新 <ion-icon name="alert" id="imp-update"></ion-icon> -->
+                <!--不再支持的版本 <ion-icon name="sad" id="not-support"></ion-icon> -->
+                <ion-icon name="download" id="app-update" class="app-status"></ion-icon>
+                <ion-icon name="cloud-download" id="download" class="app-status"></ion-icon>
+                <ion-icon name="wifi-outline"></ion-icon>
+            </div>
+            <div id="status-download"></div>
+        </div>
+        <div id="statuscard-notice">
+            <div id="notice-unimp"></div>
+        </div>
+        <ion-icon name="caret-down-circle" id="statuscard-hide"></ion-icon>
+    </div>
+    
+    <!-- 更新日志 -->
+     <div id="update">
+        <ion-icon name="caret-forward-circle" id="update-hide"></ion-icon>
+     </div>
+
+    <!-- 底部导航栏 -->
+    <div id="footer">
+        <div id="footer-home">
+            <ion-icon name="home"></ion-icon>
+            <!-- <span class="tooltip" id="tooltip-home">首页</span> -->
+        </div>
+        <div id="footer-setting">
+            <ion-icon name="settings"></ion-icon>
+        </div>
+        <div id="footer-status">
+            <ion-icon name="infinite"></ion-icon>
+        </div>
+        <div id="footer-local">
+            <ion-icon name="apps"></ion-icon>
+        </div>
+        <div id="footer-cloud">
+            <ion-icon name="cloud"></ion-icon>
+        </div>
+        <div id="footer-select"></div>
+    </div>
+
+    <!-- 底部导航栏footertip -->
+     <div id="footertip">
+        <div id="tip-home">首页</div>
+        <div id="tip-setting">设置</div>
+        <div id="tip-status">状态栏</div>
+        <div id="tip-local">本地</div>
+        <div id="tip-cloud">云端</div>
+     </div>
+
+</body>
+</html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/home/home.css">
+
+<!-- 背景动画 -->
+<script src="js/bg.js"></script>
+
+<!-- 变量集 -->
+<script src="./js/global.js"></script>
+
+<!-- 语言文件 -->
+<script src="./js/lang/en_us.js"></script>
+<script src="./js/lang/zh_cn.js"></script>
+
+<!-- 语言加载 -->
+<script src="./js/lang/reflash_lang.js"></script>
+<script src="./js/lang/init.js"></script>
+
+<!-- 图标库 使用方法：<ion-icon name="home"></ion-icon> 具体查看官网：https://ionic.io/ionicons -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<!-- home动画 -->
+ <script src="js/home/animation.js"></script>
+
+<!-- footer动画 -->
+<script src="./js/footer/animation.js"></script>
+<script src="./js/footer/switch.js"></script>
+<script src="./js/footer/statuscard.js"></script>
+
+<!-- 动画库 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<!-- 入场动画 注意,必须放在这里 -->
+<script>
+    gsap.from(["#home-title-bar", "#home-quick-start-upgrade", "#home-quick-start-version"], { 
+        opacity: 0, /*初始透明度*/
+        y: 50, /*初始y轴*/
+        duration: 1, /*动画持续时间*/
+        stagger: 0.3,/*连续动画的间隔时间*/
+        ease: "power2.out" 
+    });
+    gsap.from(["#footer-home", "#footer-setting", "#footer-local", "#footer-cloud", "#footer-status"], {
+        opacity: 0, 
+        y: 35, 
+        duration: 0.5, 
+        stagger: 0.2,
+        ease: "power2.out"
+    });
+</script>
+
+<!-- 逻辑 -->
+<script type="module" src="./js/footer/getitem.js"></script>

@@ -1,0 +1,71 @@
+.ols-visual{
+    background-color: #FFFFFF;
+    width: 80px;
+    height: 35px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+
+    position: relative;
+
+    transition: 0.2s;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    overflow: hidden;
+
+    z-index: 10;
+}
+.ols-visual:hover{
+    background-color: #F8C8C8;
+    transition: 0.2s;
+    animation: shake 6s ease infinite;;
+}
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-1px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(1px);
+    }
+}
+.ols-visual:active{
+    animation: none !important;
+    opacity: 0;
+    transition: opacity 0.1s;
+}
+.ols-visual .ols-sys-surface-text{
+    width: 100%;
+    height: 100%;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 800;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translateX(-50%) translateY(-50%);
+
+    z-index: 4;
+
+    pointer-events: none;
+}
+
+
+.ols-sys-button-visual-spotlight-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: #000000; /* 黑色遮罩 */
+    clip-path: circle(0% at 0 0);
+    transition: clip-path 0.4s ease;
+    z-index: 9;
+}

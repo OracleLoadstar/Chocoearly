@@ -50,7 +50,7 @@ if %errorlevel% neq 0 (
 if "%qa%" == "0" (
     goto eof
 )
-git tag -a "%qa_a%" -m "%qb%" -v
+git tag -a "%qa_a%"
 :loop_a
 git push --tags -v
 if %errorlevel% neq 0 (

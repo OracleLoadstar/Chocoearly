@@ -1,0 +1,196 @@
+/* html{
+    font-family: ;
+} */
+body{
+    background-color: #E6E6FA;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #E6E6FA; /* 浅紫色背景 */
+    z-index: -1; /* 确保在内容下层 */
+}
+.shape {
+    position: absolute;
+    opacity: 0.3; /* 半透明效果 */
+}
+
+
+
+#footer{
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 96px);
+    background-color: #b8b8fc;
+    padding:10px;
+    border-radius:50px;
+    transition: all 0.3s ease-in-out;
+}
+#footer div{
+    height:36px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-left:12px;
+}
+#footer div:hover{
+    cursor: pointer;
+}
+#footer ion-icon{
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s cubic-bezier(0.33, 0, 0.67, 1);
+}
+#footer ion-icon:hover{
+    filter: drop-shadow(0 0 8px rgba(0,0,0,0.2));
+    transform: translateY(-5px);
+}
+#footer-status{
+    color: #6B8E6D;
+}
+#footer-home{
+    /* color: #FFB74D; */    
+    color: #000;
+}
+#footer-setting{
+    color: #000;
+    /* color: #616161; */
+}
+#footer-local{
+    color: #000;
+    /* color: #81C784; */
+}
+#footer-cloud{
+    color: #000;
+    /* color: #81D4FA; */
+}
+
+
+#statuscard{
+    background-color: #a4a4fa;
+    box-shadow: 
+    0 5px 10px #60609280,
+    0 0 10px -5px #60609280;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    position: fixed;
+    height:clamp(300px , 30vh , 1000px);
+    width:clamp(600px , 60vh , 2000px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100000;
+    padding: 12px;
+    
+    bottom:-1000px;
+    transition: all 0.5s ease;
+
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#statuscard-hide {
+    position: absolute;
+    font-size: 24px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3px;
+    transform: scale(1);
+    transition: all 0.2s ease;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+}
+#statuscard ion-icon:hover{
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+#statuscard-status{
+    width: 65%;
+    height: 100%;
+    background-color: lightcoral;
+    border-radius: 20px;
+    padding: 3px;
+}
+#status-bar{
+    display: flex;
+    height: 32px;
+    width: 100%;
+    background-color: lightgrey;
+    border-radius: 20px 20px 0 0;
+    flex-flow: row-reverse nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    
+    font-size: 20px;
+}
+#status-bar > *:first-child {
+    margin-right: 5px;
+}
+#ready{
+    color:green;
+}
+#status-download{
+    height: calc(100% - 32px);
+    width: 100%;
+    background-color: lightgreen;
+    border-radius: 0 0 20px 20px;
+}
+#statuscard-notice{
+    width: 34%;
+    height: 100%;
+    background-color: lightblue;
+    border-radius: 20px;
+    padding: 3px;
+}
+
+
+#footertip{
+    display: flex;
+    flex-flow: row nowrap;
+    position: absolute;
+    bottom: 0px;
+    left: calc(50% - 96px);
+    background-color: transparent;
+    padding:10px;
+    border-radius:50px;
+    transition: all 0.3s ease-in-out;
+    font-size: 10px;
+    font-weight: 600;
+    margin-left: 14px;
+    color: #61616100;
+}
+#tip-setting{
+    margin-left: 16px;
+}
+#tip-status{
+    margin-left: 11px;
+}
+#tip-local{
+    margin-left: 11px;
+}
+#tip-cloud{
+    margin-left: 16px;
+}
+
+
+#notice-imp{
+    width: 15vw;
+    height: auto;
+    background-color: lightcoral;
+}
