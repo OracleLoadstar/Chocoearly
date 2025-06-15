@@ -1,38 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>Chocoearly</title>
+	<meta charset="UTF-8">
+	<title>ChocoEarly: 图形化包管理器</title>
 </head>
 <body>
-
-    <div class="ols-sys-button-visual-spotlight-overlay"></div>
-    <button class="ols-filled-imp" id="m1">
-        <span class="ols-sys-surface-text">确认</span>
-    </button>
-    <br>
-    <button class="ols-filled" id="m2">
-        <span class="ols-sys-surface-text">确认</span>
-    </button>
-    <br>
-    <button class="ols-visual" id="m3">
-        <span class="ols-sys-surface-text">确认</span>
-    </button>
-    <button class="ols-visual" id="m4">
-        <span class="ols-sys-surface-text">确认</span>
-    </button>
-    <button class="ols-visual" id="m5">
-        <span class="ols-sys-surface-text">确认</span>
-    </button>
-
+<!--	入口级div-->
+	<div class="app">
+<!--		侧边导航栏-->
+		<nav>
+			<h1>ChocoEarly</h1>
+<!--			界面导航按钮-->
+			<ol>
+				<li><button id="#home-btn" class="page-btn"><a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
+					主页</a></button></li>
+				<li><button id="#local-btn" class="page-btn"><a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M234.5 5.7c13.9-5 29.1-5 43.1 0l192 68.6C495 83.4 512 107.5 512 134.6l0 242.9c0 27-17 51.2-42.5 60.3l-192 68.6c-13.9 5-29.1 5-43.1 0l-192-68.6C17 428.6 0 404.5 0 377.4L0 134.6c0-27 17-51.2 42.5-60.3l192-68.6zM256 66L82.3 128 256 190l173.7-62L256 66zm32 368.6l160-57.1 0-188L288 246.6l0 188z"/></svg>
+					本地</a></button></li>
+				<li><button id="#explore-btn" class="page-btn"><a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
+					探索</a></button></li>
+				<li><button id="#setting-btn" class="page-btn"><a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/></svg>
+					设置</a></button></li>
+			</ol>
+<!--			单独的帮助按钮-->
+			<button class="icon-button" id="help-btn" data-tooltip="帮助"><a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM169.8 165.3c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>
+			</a></button>
+		</nav>
+		
+<!--		界面，一律使用flex布局-->
+		<main class="app-main">
+<!--			主页-->
+			<section class="app-section" id="home">
+<!--				界面头-->
+				<div class="page-head">
+					<h1>欢迎使用ChocoEarly</h1>
+					<p>ChocoEarly是一个用户友好型的图形化软件包管理器。你可以使用它快捷安装、更新、卸载应用。</p>
+				</div>
+<!--				快速开始组件-->
+				<div class="page-compose" id="quick-start">
+					<h2>快速开始</h2>
+					<button class="filled-button imp-button">搜索</button>
+					<div class="quick-start-button-bundle">
+						<button class="filled-button">浏览</button>
+						<button class="filled-button">更新</button>
+						<button class="filled-button">拓展</button>
+					</div>
+				</div>
+<!--				推荐一些软件包，但是该怎么推荐呢？还是改为更新？-->
+				<div class="page-compose">
+					<h2>探索</h2>
+<!--					卡片组，主界面的卡片组为三个-->
+					<div class="card-bundle">
+<!--						由于没有使用WebComponents规范，所以请完整的抄写结构（使用JS注入时）-->
+						<a href=""><div class="explore-card">
+							<img src="res/01.png" alt="logoA">
+							<h3>包A</h3>
+							<p>首先,毋庸置疑的是,我爱美浦波旁.其次,圣诞节波旁在那个年代可是会提供惊人的金色技能[名字我忘了].虽然如此,但是我的美浦波旁换装呢?cy快点端上来吧!</p>
+						</div></a>
+<!--					    结构展示：                           -->
+<!--							<a>                             -->
+<!--								<div>                       -->
+<!--									<img>                   -->
+<!--									<h3></h3>               -->
+<!--									<p></p>                 -->
+<!--								</div>                      -->
+<!--							</a>                            -->
+						<a href=""><div class="explore-card">
+							<img src="res/04.png" alt="logoB">
+							<h3>包B</h3>
+							<p>描述</p>
+						</div></a>
+						<a href=""><div class="explore-card">
+							<img src="res/05.png" alt="logoC">
+							<h3>包C</h3>
+							<p>描述</p>
+						</div></a>
+					</div>
+				</div>
+			</section>
+<!--			本地应用管理-->
+			<section class="app-section" id="local">
+<!--				界面头-->
+				<div class="page-head">
+					<h1>软件包管理</h1>
+					<p>管理你的软件包</p>
+				</div>
+<!--				搜索框-->
+				<div class="page-compose" id="local-search"><label><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+					<input type="text" placeholder="搜索本地的软件包">
+				</label></div>
+<!--				卡片组，这个卡片组和主界面的不一致，和探索界面一致-->
+				<div class="page-compose">
+<!--					使用有序链表-->
+					<ol class="card-list" id="local-ol">
+						<li><a href=""><img src="res/01.png" alt=""><h3>ChocoEarly</h3>
+						<p>首先,毋庸置疑的是,我爱美浦波旁.其次,圣诞节波旁在那个年代可是会提供惊人的金色技能[名字我忘了].虽然如此,但是我的美浦波旁换装呢?cy快点端上来吧!</p></a></li>
+<!--							结构展示：                           -->
+<!--								<li>                            -->
+<!--									<a>                         -->
+<!--										<img>                   -->
+<!--										<h3></h3>               -->
+<!--										<p></p>                 -->
+<!--									</a>                        -->
+<!--								</li>                           -->
+						<li><a href=""><img src="res/01.png" alt=""><h3>PackageA</h3>
+						<p>描述</p></a></li>
+						<li><a href=""><img src="res/01.png" alt=""><h3>PackageB</h3>
+						<p>描述</p></a></li>
+						<li><a href=""><img src="res/01.png" alt=""><h3>PackageC</h3>
+						<p>描述</p></a></li>
+						<li><a href=""><img src="res/01.png" alt=""><h3>PackageD</h3>
+						<p>描述</p></a></li>
+					</ol>
+				</div>
+			</section>
+<!--			联机搜索软件包-->
+			<section  class="app-section" id="explore">
+<!--				界面头-->
+				<div class="page-head">
+					<h1>探索软件包</h1>
+					<p>联网搜索安装软件包</p>
+				</div>
+<!--				搜索框-->
+				<div class="page-compose" id="explore-search"><label><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+					<input type="text" placeholder="搜索本地的软件包">
+				</label></div>
+<!--				卡片组，与Local一致（除了ID）-->
+				<div class="page-compose">
+					<!--					使用有序链表-->
+					<ol class="card-list" id="explore-ol">
+						<li><a href=""><img src="res/01.png" alt=""><h3>ChocoEarly</h3>
+							<p>首先,毋庸置疑的是,我爱美浦波旁.其次,圣诞节波旁在那个年代可是会提供惊人的金色技能[名字我忘了].虽然如此,但是我的美浦波旁换装呢?cy快点端上来吧!</p></a></li>
+						<li><a href=""><img src="res/01.png" alt=""><h3>PackageA</h3>
+							<p>描述</p></a></li>
+						<li><a href=""><img src="res/01.png" alt=""><h3>PackageB</h3>
+							<p>描述</p></a></li>
+						<li><a href=""><img src="res/01.png" alt=""><h3>PackageC</h3>
+							<p>描述</p></a></li>
+						<li><a href=""><img src="res/01.png" alt=""><h3>PackageD</h3>
+							<p>描述</p></a></li>
+					</ol>
+				</div>
+			</section>
+<!--			设置界面-->
+			<section  class="app-section" id="setting">
+				<div class="page-head">
+					<h1>设置</h1>
+					<p>管理你的ChocoEarly</p>
+				</div>
+				<div class="page-compose">
+					<h2>核心配置</h2>
+					<div class="page-compose-sub">
+						<h3>软件源管理</h3>
+						<div>
+							<div>所有源
+								<table>
+									<tr class="">
+										<td>名称</td>
+										<td>URL</td>
+										<td>优先级</td>
+										<td>启用状态</td>
+										<td>是否信任自签证书</td>
+										<td>操作</td>
+									</tr>
+									<tr class="">
+										<td>OracleLoadstar</td>
+										<td>oraclestar.cn</td>
+										<td><label>
+											<select name="">
+												<option>低优先级</option>
+												<option>中优先级</option>
+												<option>高优先级</option>
+											</select>
+										</label></td>
+										<td>
+											<span class="slider"></span>
+										</td>
+										<td>
+											<span class="slider"></span>
+										</td>
+										<td>
+											<label>编辑<button></button></label>
+											<label>删除<button></button></label>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div>添加新源
+								<label>名称<input type="text"></label>
+								<label>URL<input type="text"></label>
+								<label>优先状态<input type="text"></label>
+								<label>启用状态<input type="text"></label>
+								<label>是否信任自签证书<input type="text"></label>
+								<button>添加</button>
+							</div>
+							<button>连接测试</button>
+						</div>
+						<h3>功能开关</h3>
+						<div>
+							<ul>
+								<li>allowGlobalConfirmation<span class="slider"></span></li>
+								<li>seRememberedArgumentsForUpgrades<span class="slider"></span></li>
+								<li>allowEmptyChecksumsSecure<span class="slider"></span></li>
+								<li>allowEmptyChecksums<span class="slider"></span></li>
+								<li>failOnStandardError<span class="slider"></span></li>
+								<li>powershellHost<span class="slider"></span></li>
+								<li>virusCheck<span class="slider"></span></li>
+								<li>failOnAutoUninstaller<span class="slider"></span></li>
+								<li>ignoreInvalidOptionsSwitches<span class="slider"></span></li>
+								<li>usePackageRepositoryOptimizations<span class="slider"></span></li>
+								<li>logEnvironmentValues<span class="slider"></span></li>
+								<li>allowDowngrade<span class="slider"></span></li>
+								<li>scriptExecutionTimeoutSeconds<span class="slider"></span></li>
+							</ul>
+						</div>
+						<h3>代理设置</h3>
+						<div>
+							<label>地址<input type="text"></label>
+							<label>端口<input type="text"></label>
+							<label>用户名<input type="text"></label>
+							<label>密码<input type="password"></label>
+							<label>绕过列表<input type="text"></label>
+							<label>绕过本机地址<input type="text"></label>
+						</div>
+						<div>
+							<button>清除代理设置</button>
+							<button>连接测试</button>
+						</div>
+						<h3>缓存设置</h3>
+						<div>
+							<label>缓存
+								<span class="slider"></span>
+							</label>
+							<label>缓存目录
+								<input type="text">
+							</label>
+							<button><!--打开目录--></button>
+						</div>
+						<h3>API密钥管理</h3>
+						<div>
+						
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+<!--	软件包详细信息界面-->
+	<aside>
+		<h1>包A</h1>
+		<p>Version: 1.2.1</p>
+		<p>描述</p>
+		<h2>详细信息</h2>
+		<p>我也不知道有没有这个玩意，反正先写着</p>
+		<div>
+			<button>卸载</button>
+			<button>更新</button>
+			<button>安装</button>
+		</div>
+	</aside>
 </body>
 </html>
+<!--                    JS加载-->
+<!--	    全局变量-->
+<script src="assets/var.js"></script>
+<script src="page/page.js"></script>
 
-<!--组件加载-->
-<link rel="stylesheet" href="components/button/filled-imp/filled-imp.css">
-<link rel="stylesheet" href="components/button/filled/filled.css">
-<link rel="stylesheet" href="components/button/outlined/outlined.css">
-<link rel="stylesheet" href="components/button/visual/visual.css">
-<script src="components/button/visual/visual.js"></script>
-<script src="components/button/createAnimationElements.js"></script>
-<script src="./tools/getitem.js"></script>
+<!--                    CSS加载-->
+<!--		资源加载-->
+<link rel="stylesheet" href="assets/global.css">
+<link rel="stylesheet" href="assets/var.css">
+<link rel="stylesheet" href="assets/fonts/font.css">
+<!--		组件加载-->
+<link rel="stylesheet" href="components/nav.css">
+<link rel="stylesheet" href="components/button.css">
+<link rel="stylesheet" href="components/tooltip.css">
+<link rel="stylesheet" href="components/explore-card.css">
+<!--		页面加载-->
+<link rel="stylesheet" href="page/page.css">
+<link rel="stylesheet" href="page/home/home.css">
+<link rel="stylesheet" href="page/local/local.css">
+<link rel="stylesheet" href="page/explore/explore.css">

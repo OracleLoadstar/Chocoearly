@@ -1,0 +1,20 @@
+:root{
+	--bcc: #f8fafc;
+	--bcc-deepen: #e7eef4;
+	--bcc-deepen-plus: #e0e8ef;
+	--imp-c: #2094f3;
+	--imp-c-hover: #1c8fed;
+	--font-c: #333b42;
+	--imp-font-c: #0d151c;
+	--not-imp-font-c: #7296b3;
+	--border-c: #dfe9f0;
+	
+	--page-cpmt-space: 16px 0 14px 20px;
+	--page-sub-cpmt-space: 24px;
+	
+	--radius-nl: 10px;
+	--radius-sm: 6px;
+	--radius-wonder: 50%;
+	
+	--card-width: 220px;
+}

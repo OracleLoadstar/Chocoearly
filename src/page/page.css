@@ -1,0 +1,74 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body::-webkit-scrollbar {
+	display: none;
+}
+aside{
+	display: none;
+}
+.app{
+	height: 100vh;
+	background-color: var(--bcc);
+	
+	display: flex;
+	overflow: hidden;
+}
+.app-main{
+	height: 100vh;
+	
+	position: relative;
+	flex: 1;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.app-main::-webkit-scrollbar {
+	width: 8px;
+}
+.app-main::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 4px;
+}
+
+.app-main section {
+	display: none;
+}
+.app-main section.active {
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.page-head{
+	margin: var(--page-cpmt-space);
+}
+.page-head h1{
+	font-size: 46px;
+	color: var(--imp-font-c);
+	
+	margin-bottom: var(--page-sub-cpmt-space);
+}
+.page-head p{
+	font-size: 16px;
+	font-weight: 200;
+	color: var(--font-c);
+}
+.page-compose{
+	margin: var(--page-cpmt-space);
+}
+.page-compose h2{
+	width: 100vw;
+	font-size: 28px;
+	
+	margin-bottom: 16px;
+}
+.page-compose-sub{
+	margin: var(--page-sub-cpmt-space)
+}
+.page-compose-sub h3{
+	width: 100vw;
+	font-size: 22px;
+	
+	margin-bottom: 16px;
+
+}

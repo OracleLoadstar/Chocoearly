@@ -1,0 +1,89 @@
+.ols-filled{
+    background-color: #FFFFFF;
+    width: 80px;
+    height: 35px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+
+    position: relative;
+
+    transition: 0.1s;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    overflow: hidden;
+}
+.ols-filled .ols-sys-ani-hover-1{
+    width: 100%;
+    height: 100%;
+    border-top-width: 5px;
+    border-top-style: solid;
+    border-top-color: #b8b8b8;
+    border-right-width: 5px;
+    border-right-style: solid;
+    border-right-color: #b8b8b8;
+    border-radius: 10px;
+
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+
+    transform: translateX(50%) translateY(50%);
+    transition: 0.8s;
+
+    pointer-events: none;
+}
+.ols-filled .ols-sys-ani-hover-2{
+    width: 100%;
+    height: 100%;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: #b8b8b800;
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: #b8b8b800;
+    border-radius: 10px;
+
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+
+    transform: translateX(50%) translateY(50%);
+    transition: 0.8s;
+
+    pointer-events: none;
+}
+.ols-filled:hover .ols-sys-ani-hover-1 {
+    border-top-color: #b8b8b800;
+    border-right-color: #b8b8b800;
+    transition: 0.8s;
+}
+.ols-filled:hover .ols-sys-ani-hover-2 {
+    border-bottom-color: #b8b8b8;
+    border-left-color: #b8b8b8;
+    transition: 0.8s;
+}
+.ols-filled:active{
+    transform: translateX(5px) translateY(-5px);
+    transition: 0.1s;
+}
+.ols-filled .ols-sys-surface-text{
+    width: 100%;
+    height: 100%;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 800;
+    -webkit-text-stroke: 0.3px #FFFFFF;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translateX(-50%) translateY(-50%);
+
+    z-index: 4;
+
+    pointer-events: none;
+}

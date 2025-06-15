@@ -1,0 +1,11 @@
+body{
+	font-family: 'Space Grotesk','PuHui', sans-serif;
+}
+@font-face {
+	font-family: 'Space Grotesk';
+	src: url('space-grotesk-latin-400-normal.woff') format('woff2');
+}
+@font-face {
+	font-family: 'PuHui';
+	src: url('AlibabaPuHuiTi-3-75-SemiBold.woff2') format('woff2');
+}

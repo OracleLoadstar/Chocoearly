@@ -1,0 +1,63 @@
+nav{
+	width: 250px;
+	height: 100vh;
+	background-color: var(--bcc);
+	border-right: 1px solid var(--border-c);
+	
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	
+	flex-shrink: 0;
+}
+nav h1 {
+	align-self: self-start;
+	margin: 32px 0 8px 24px;
+}
+nav ol{
+	list-style: none;
+}
+nav ol li button{
+	width: 200px;
+	height: 36px;
+	background-color: transparent;
+	border: 0;
+	border-radius: var(--radius-nl);
+	
+	margin: 16px 0 0 0;
+	
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+	
+	transition: background-color 0.1s;
+}
+nav ol li button:hover{
+	background-color: var(--bcc-deepen);
+}
+nav ol  li button a{
+	width: 170px;
+	height: 24px;
+	font-size: 16px;
+	font-weight: bold;
+	color: var(--font-c);
+	
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 40px;
+	
+	text-decoration: none;
+}
+nav ol li button a svg{
+	margin-left: 12px;
+}
+
+#help-btn{
+	position: absolute;
+	bottom: 24px;
+	left: 125px;
+	
+	transform: translateX(-50%);
+}

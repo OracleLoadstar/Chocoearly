@@ -1,0 +1,86 @@
+.card-bundle{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 12px;
+}
+.card-bundle a{
+	color: var(--imp-font-c);
+	text-decoration: none;
+}
+.explore-card{
+	height: 320px;
+	width: var(--card-width);
+	border-radius: var(--radius-nl);
+	
+	display: flex;
+	flex-flow: column nowrap;
+	
+	overflow: hidden;
+}
+.card-bundle img{
+	width: var(--card-width);
+	height: var(--card-width);
+	object-fit: cover;
+	border-radius: inherit;
+}
+.explore-card h3{
+	font-size: 24px;
+}
+.explore-card p,
+.card-list li p {
+	font-size: 12px;
+	font-weight: lighter;
+	
+	display: -webkit-box;
+	-webkit-line-clamp: 5; /* 限制显示行数 */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	
+	/* 可选：固定高度（行高×行数） */
+	line-height: 1.4;
+	max-height: calc(1.4em * 5); /* 5行文本高度 */
+}
+
+
+.card-list{
+	width: 100%;
+	height: auto;
+	border-radius: var(--radius-nl);
+	
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 32px;
+	
+	list-style: none;
+}
+.card-list li{
+	width: 180px;
+	height: 280px;
+	
+	display: inherit;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	
+	overflow: hidden;
+}
+.card-list li img{
+	width: 180px;
+	height: 180px;
+	border-radius: var(--radius-nl);
+	object-fit: cover;
+}
+.card-list li h3{
+	font-size: 20px;
+	color: var(--imp-font-c);
+}
+.card-list li p{
+	-webkit-line-clamp: 4;
+	max-height: calc(1.4em * 4);
+	color: var(--imp-font-c);
+}

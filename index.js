@@ -17,7 +17,7 @@ function createWindow() {
         }
     });
     
-    win.loadFile('./src-test/index.html');
+    win.loadFile('./src/index.html');
     win.setMenu(null); // Disable the menu bar
     win.setMinimumSize(1000,600);
 

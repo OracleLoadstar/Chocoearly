@@ -1,0 +1,9 @@
+#home{
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+#quick-start{
+	display: flex;
+	flex-flow: column wrap;
+	gap: 12px;
+}
